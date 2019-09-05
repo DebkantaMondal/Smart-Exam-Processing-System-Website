@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home|Appsindia</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+  /*CSS is developed and written by Debkanta (APPS)*/
+
+  /*General*/
+  body{
+  	margin:0px;
+  }
+  a{
+  	color:white;
+  	text-decoration:none;
+  }
+
+  /*Header*/
+  .navigation{
+  	list-style:none;
+      margin:0px;
+  	display:-webkit-box; /*for Chrome*/
+  	display:-moz-box;   /*for Firefox*/
+  	display:-ms-flexbox; /*for Ms Internet Explorer*/
+  	display:-webkit-flex; /*for new Chrome*/
+  	display:flex;  /*General*/
+  	justify-content:flex-end;
+  	-webkit-flex-flow:row wrap; /*for new Chrome*/
+  	background:green;
+  }
+  .navigation a{
+  	text-decoration:none;
+  	padding:1em;
+  	color:white;
+  	display:block;
+  	font-family:"Ubantu",sans-serif;
+  	font-weight:bold;
+  }
+  .navigation a:hover{
+  	background:#205e17;
+  }
+
+  /*media quaries*/
+  @media all and (max-width:800px){
+  	.navigation{
+  		justify-content:space-around;
+  	}
+  }
+  @media all and (max-width:600px){
+  	.navigation{
+  		-webkit-flex-flow:column wrap; /*for new Chrome*/
+  		flex-flow:column wrap;
+  		padding:0px;
+  	}
+  	.navigation a{
+  		padding:15px;
+  		text-align:center;
+  		border-top:1px solid #40e527;
+  		border-bottom:1px solid #40e527;
+  	}
+  	.navigation li:last-of-item a{
+  		border-bottom:none;
+  	}
+  }
+
+  /*Other Part*/
+  .wrapper{
+  	display:flex;
+  	flex-flow:row wrap;
+  	font-family:"Ubantu",sans-serif;
+  	text-align:center;
+  }
+  .wrapper>*{
+  	padding:10px;
+  	flex:1 100%;
+  }
+  .footer{
+  	background:green;
+  	color:white;
+  	font-weight:bold;
+  }
+  .main{
+  	text-align:center;
+  }
+  .aside-1{
+  	background:red;
+  	color:white;
+  }
+  .aside-2{
+  	background:hotpink;
+  	color:white;
+  }
+
+  /*media quiries*/
+  @media all and (min-width:600px){
+  	.aside{
+  		flex:1 auto;
+  	}
+  }
+  @media all and (min-width:800px){
+  	.main{
+  		flex:3 0px;
+  	}
+  	.aside-1{
+  		order:1;
+  	}
+  	.main{
+  		order:2;
+  	}
+  	.aside-2{
+  		order:3;
+  	}
+  	.footer{
+  		order:4;
+  	}
+  }
+  @media all and (max-width:800px){
+  	.main{
+  		background:yellow;
+  	}
+  }
+
+a:visited{
+  color:white;
+}
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #4286f4;
+      height: 100%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: green;
+      color: white;
+      padding: 15px;
+    }
+
+    .btn{
+      padding:0px;
+      width:98%;
+      height:auto;
+      background-color:#105;
+      border:3px solid #110;
+      color:#ffffff;
+      margin:5px;
+      border-radius:4px 4px 4px 4px;
+    }
+    .btn:hover{
+      color:green;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+    }
+    .active{
+      background: #205e17;
+      border-right: 1px solid #fff;
+    }
+    .o1{
+      border-right: 1px solid #fff;
+    }
+
+    .header{
+      background-color: yellow ;
+      color: #205e17;
+      width:100%;
+      border-top: 2px solid #205e17;
+      border-bottom: 2px solid #205e17;
+      font-family:"Ubantu",sans-serif;
+    }
+  </style>
+  
+  <style>
+  @import url(https://fonts.googleapis.com/css?family=Raleway);
+h2 {
+  vertical-align: center;
+  text-align: center;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+* {
+  font-family: "Raleway";
+  box-sizing: border-box;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00BAF0;
+  background: linear-gradient(to left, #f46b45, #eea849);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #FFF;
+  height: 50px;
+  padding: 1em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+ </style>
+  
+</head>
+<body>
+<section class="top-nav">
+    <div>
+      Logo Here
+    </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+  </label>
+    <ul class="menu">
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+      <li>Four</li>
+      <li>Five</li>
+    </ul>
+  </section>
+
+
+<!--<div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="#">Students' Desk</a></p>
+      <p><a href="#">Legal Notice</a></p>
+      <p><a href="#">Information Bulletin</a></p>
+    </div>
+    <div class="col-sm-8 text-left">
+    <center>  <h1>Welcome</h1> </center>
+      <p>ECA is a Web Builder, Design and App Developing Site. We work on these Packages viewed upon here.This is our new Site.This
+      Site contains more informations about us . More of all we work for you and please co-operate with us.</p>
+      <hr>-->
+
+      <form action="/main/Apps/resultLoginIde/" method="POST" target="blank">
+      <button class="btn" type="submit">
+      <h4>EXAM RESULT 2018--DOWNLOAD YOUR RANK CARD</h4>
+      </button>
+    </form>
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p><b>NOTICE</b></p>
+        <hr>
+        <p>New Student Registration Desk *</p>
+      </div>
+      <div class="well">
+        <p><b>RECENT UPDATES</b></p>
+        <hr>
+        <marquee direction="up" scrollamount="1">
+        <center>  No Recent News Available.
+          <br/>
+       ----------------------------
+        </center>
+        </marquee>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p><h4>This Site is designed by Appsindia</h4></p>
+</footer>
+
+</body>
+</html>
