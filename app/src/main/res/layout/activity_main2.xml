@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    app:cardCornerRadius="7dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginVertical="10dp"
+    app:cardElevation="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Main2Activity"
+        android:orientation="vertical"
+        android:layout_marginVertical="3dp"
+        >
+         <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/imagePoster"
+            android:gravity="center"
+             android:elevation="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:fontFamily="Roboto,Open Sans Condensed,sans-serif"
+            android:layout_height="wrap_content"
+            android:id="@+id/textName"
+            android:layout_below="@+id/imagePoster"
+            android:textStyle="italic"
+            android:textSize="28sp"
+            android:textColor="#2E2D2D"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="Roboto,Open Sans Condensed,sans-serif"
+            android:id="@+id/textSum"
+            android:layout_below="@+id/text1"
+            android:layout_margin="12dp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/btn_book"
+            android:layout_width="138dp"
+            android:layout_height="40dp"
+            android:fontFamily="Roboto,Open Sans Condensed,sans-serif"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="142dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Book Now"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_ui"
+            android:textColor="#fff"/>
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+
