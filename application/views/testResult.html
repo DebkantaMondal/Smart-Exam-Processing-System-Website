@@ -1,0 +1,148 @@
+<html>
+
+   <head>
+     <link rel="shortcut icon" href="http://buildingbrightfutures.org/wp-content/uploads/2015/08/Wiki-tech-logo-300x300.png" sizes="16x16">
+      <title>Result|Apps</title>
+	  <style>
+         input{
+		   border-radius:6px 6px 6px 6px;
+		   border:2px solid green;
+		 }
+	  </style>
+
+      <script type="text/javascript">
+
+         function validate()
+      {
+      var a=document.myForm.regno.value;
+      var patt1 = "^[0-9]{8}$";
+if( a.match(patt1))
+         {
+          return( true );
+         }
+
+         alert( "Registration Number is Invalid.Please provide your Valid Registration Number!" );
+         document.myForm.regno.focus() ;
+         return false;
+    }
+      </script>
+
+
+   </head>
+
+   <body onload="createCaptcha()">
+   	  <script language="JavaScript">
+
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script>
+   <br/>
+
+   <br/><br/>
+      <form action="/main/Test/studentResult/" target="_blank" method="post" name="myForm" onsubmit="return(validate());">
+        <!--int string_validate1();Day_bad conditions of programming segment-->
+         <center>
+		 <table cellspacing="2" cellpadding="2" border="1" style="background:#fff;border:1px solid green;">
+
+            <tr>
+               <td align="right" style="color:#000;"><b>Enter Registration No:</b></td>
+               <td><input type="number" name="regno" /></td>
+            </tr>
+            <!--<tr>
+               <td align="right" style="color:#000;"><b>Enter Capcha Code:</b> <div id="captcha">
+    </div></td>
+               <td><input name="capcha" id="cpatchaTextBox" required/></td>
+            </tr>-->
+            <tr>
+               <td align="right"><a href="/main/Apps/resultLoginIde/"><input type="button" value="Reset" /></a></td>
+               <td><!--<input type="button" value="Check" />&nbsp;&nbsp;--><input type="submit" value="Submit" /></td>
+            </tr>
+
+         </table>
+		 </center>
+      </form>
+<!--<script>
+var code;
+function createCaptcha() {
+  //clear the contents of captcha div first
+  document.getElementById('captcha').innerHTML = "";
+  var charsArray =
+  "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
+  var lengthOtp = 6;
+  var captcha = [];
+  for (var i = 0; i < lengthOtp; i++) {
+    //below code will not allow Repetition of Characters
+    var index = Math.floor(Math.random() * charsArray.length + 1); //get the next character from the array
+    if (captcha.indexOf(charsArray[index]) == -1)
+      captcha.push(charsArray[index]);
+    else i--;
+  }
+  var canv = document.createElement("canvas");
+  canv.id = "captcha";
+  canv.width = 100;
+  canv.height = 50;
+  var ctx = canv.getContext("2d");
+  ctx.font = "25px Georgia";
+  ctx.strokeText(captcha.join(""), 0, 30);
+  //storing captcha so that can validate you can save it somewhere else according to your specific requirements
+  code = captcha.join("");
+  document.getElementById("captcha").appendChild(canv); // adds the canvas to the body element
+}
+function validateCaptcha() {
+  event.preventDefault();
+  debugger
+  if (document.getElementById("cpatchaTextBox").value == code) {
+    alert("Valid Captcha")
+  }else{
+    alert("Invalid Captcha. try Again");
+    createCaptcha();
+  }
+}
+</script>-->
+<br/><br/><br/><br/><br/>
+<center>
+  <div style="color:red;">
+    <p><b><u>INSTRUCTIONS</u></b></p>
+    <p>1.Enter Registration Number.[In Proper Box]</p>
+    <p>2.Click On 'Submit' Button and get Result.</p>
+    <p>3.Then Print Result.</p>
+    <p>4. Otherwise Click 'Reset' Button and reset the page.</p>
+  </div>
+</center>
+   </body>
+</html>
